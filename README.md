@@ -65,4 +65,21 @@ Change the label into a name. This label will be added to Home Screen.
 Change the URL into a valid website. This bookmark will be added to Home Screen.
 
 
-Once you complete that, Save that to file, Go to the 3 dots,
+Once you complete that, Save that to file, Go to the 3 dots, and open options. You will see something bottom of the screen. Turn on and hold the .txt file and select rename. Remove txt and add mobileconfig.
+
+Installer guide.
+1. Launch the mobileconfig file
+2. Open settings and scroll down to VPN
+3. Open the profile
+4. Enter your passcode
+5. If it say, This profile is not sign, Ignore this and install
+6. Once it install, search in apps and start website.
+
+If you got an error, that means you done something wrong. Try use an example and change the mobileconfig into a txt.
+You might want to update to fix some errors.
+
+
+See other projects
+Mobileconfig example: https://github.com/huynhw19/MOBILECONFIG-EXAMPLE
+
+Windows 11 Exe file: https://github.com/huynhw19/Windows-11-EXE-file
