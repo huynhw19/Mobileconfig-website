@@ -50,3 +50,19 @@ Start with this
     <integer>1</integer>
 </dict>
 </plist>
+
+
+
+
+
+
+
+
+Edit these:
+Change the label into a name. This label will be added to Home Screen.
+
+
+Change the URL into a valid website. This bookmark will be added to Home Screen.
+
+
+Once you complete that, Save that to file, Go to the 3 dots,
