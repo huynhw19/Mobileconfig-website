@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant</title>
+  <style>
+    :root {
+      --bg: #fdf6ee;
+      --panel: #fffaf5;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #d97706;
+      --accent-2: #8b5e34;
+      --line: rgba(31,41,55,0.08);
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: var(--text); }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    header { background: rgba(255,255,255,0.8); border-bottom:1px solid var(--line); position: sticky; top:0; }
+    nav { display:flex; justify-content: space-between; align-items:center; min-height:72px; }
+    .brand { font-size: 1.5rem; font-weight: 800; }
+    .menu { display:flex; gap:24px; color: var(--muted); }
+    .hero { padding: 80px 0 30px; }
+    .hero-wrap { display:grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items:center; }
+    .hero-card {
+      background: linear-gradient(135deg, #fef3c7, #fcd34d); border-radius: 24px; min-height: 500px; position: relative; overflow: hidden;
+    }
+    .hero-card::before {
+      content: ""; position:absolute; inset: 40px 50px 30px 50px; background: rgba(255,255,255,0.28); border-radius: 16px;
+    }
+    h1 { font-size: clamp(2.5rem, 5vw, 4.3rem); line-height: 1.08; margin: 0 0 18px; }
+    .hero p { color: var(--muted); line-height: 1.8; font-size: 1.03rem; }
+    .actions { display:flex; gap:16px; margin-top: 26px; }
+    .btn { display:inline-block; background: var(--accent); color: white; padding: 12px 18px; border-radius: 999px; font-weight: 700; }
+    .ghost { display:inline-block; border: 1px solid var(--line); padding: 12px 18px; border-radius: 999px; }
+    .menu-section { padding: 36px 0 70px; }
+    .menu-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:22px; }
+    .dish { background: var(--panel); border:1px solid var(--line); border-radius: 18px; padding: 20px; }
+    .dish .image { height: 150px; border-radius: 12px; background: linear-gradient(135deg, #fbbf24, #f97316); margin-bottom: 14px; }
+    .dish:nth-child(2) .image { background: linear-gradient(135deg, #fdba74, #fb7185); }
+    .dish:nth-child(3) .image { background: linear-gradient(135deg, #a7f3d0, #34d399); }
+    .price { font-weight:700; font-size: 1.4rem; }
+    .hours { background: #1f2937; color: white; border-radius: 20px; padding: 22px; margin: 0 0 80px; }
+    @media (max-width: 860px) {
+      .hero-wrap, .menu-grid { grid-template-columns: 1fr; }
+      .menu { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Ember & Olive</div>
+        <div class="menu">
+          <a href="#menu">Menu</a>
+          <a href="#story">Story</a>
+          <a href="#visit">Visit</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-wrap">
+        <div>
+          <h1>Seasonal comfort food crafted daily.</h1>
+          <p>From slow-roasted dinners to bright brunch classics, we source local ingredients and cook with warmth, flavor, and care.</p>
+          <div class="actions">
+            <a href="#menu" class="btn">View menu</a>
+            <a href="#visit" class="ghost">Book a table</a>
+          </div>
+        </div>
+        <div class="hero-card"></div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <h2 style="font-size:2.2rem; margin-bottom: 24px;">Popular dishes</h2>
+        <div class="menu-grid">
+          <div class="dish">
+            <div class="image"></div>
+            <h3>Smoked Chili Pasta</h3>
+            <p>Housemade rigatoni with roasted tomato sauce and charred corn.</p>
+            <div class="price">$18</div>
+          </div>
+          <div class="dish">
+            <div class="image"></div>
+            <h3>Harvest Bowl</h3>
+            <p>Wild rice, roasted squash, greens, and lemon tahini dressing.</p>
+            <div class="price">$16</div>
+          </div>
+          <div class="dish">
+            <div class="image"></div>
+            <h3>Sunday Pancakes</h3>
+            <p>Fluffy stacks topped with maple cream and orchard fruit.</p>
+            <div class="price">$14</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container" id="visit">
+      <div class="hours">
+        <h2 style="margin-top:0;">Visit us</h2>
+        <p>126 Market Street • Open Tue-Sun • 8:00 AM - 10:00 PM</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

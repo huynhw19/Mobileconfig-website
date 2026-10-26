@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <style>
+    :root {
+      --bg: #f7f3ef;
+      --panel: #ffffff;
+      --text: #1b1b1b;
+      --muted: #5b6475;
+      --accent: #ef4444;
+      --accent-2: #f59e0b;
+      --line: rgba(27,27,27,0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: var(--text);
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    header {
+      background: rgba(255,255,255,0.9); border-bottom: 1px solid var(--line); position: sticky; top: 0; backdrop-filter: blur(8px);
+    }
+    nav { display:flex; justify-content: space-between; align-items:center; min-height: 72px; }
+    .brand { font-weight: 800; letter-spacing: 1px; }
+    .nav { display:flex; gap: 26px; color: var(--muted); }
+    .hero { padding: 70px 0 50px; }
+    .hero-wrap { display:grid; grid-template-columns: 1.1fr 0.9fr; align-items:center; gap: 36px; }
+    h1 { font-size: clamp(2.7rem, 5vw, 4.3rem); margin: 0 0 18px; }
+    .hero p { color: var(--muted); line-height: 1.8; font-size: 1.03rem; }
+    .cta { display:flex; gap: 16px; margin-top: 26px; }
+    .btn { display:inline-block; background: var(--accent); color: #fff; padding: 12px 18px; border-radius: 999px; font-weight: 700; }
+    .ghost { display:inline-block; border: 1px solid var(--line); padding: 12px 18px; border-radius: 999px; }
+    .portrait {
+      background: linear-gradient(135deg, #fbbf24, #fb7185); border-radius: 24px; min-height: 440px; position: relative; overflow: hidden;
+      box-shadow: 0 28px 46px rgba(17,24,39,0.12);
+    }
+    .portrait::before {
+      content: ""; position:absolute; inset: 40px 60px 0 60px; border-radius: 20px 20px 0 0; background: rgba(255,255,255,0.3);
+    }
+    .work { padding: 30px 0 80px; }
+    .grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
+    .card .thumb { height: 160px; border-radius: 12px; background: linear-gradient(135deg, #fca5a5, #f9a8d4); margin-bottom: 18px; }
+    .card:nth-child(2) .thumb { background: linear-gradient(135deg, #a5b4fc, #67e8f9); }
+    .card:nth-child(3) .thumb { background: linear-gradient(135deg, #86efac, #34d399); }
+    .card p { color: var(--muted); line-height: 1.7; }
+    .contact { background: #111827; color: #fff; padding: 44px 22px; border-radius: 22px; text-align: center; }
+    @media (max-width: 860px) {
+      .hero-wrap, .grid { grid-template-columns: 1fr; }
+      .nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">LENA<span style="color: var(--accent);">.</span></div>
+        <div class="nav">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-wrap">
+        <div>
+          <div style="display:inline-block; padding:8px 12px; border-radius: 999px; background: rgba(239,68,68,0.1); color: var(--accent); border: 1px solid rgba(239,68,68,0.15); font-size:0.85rem;">Available for freelance work</div>
+          <h1>Designer & developer crafting digital experiences.</h1>
+          <p>I help brands tell better stories through strategic design, front-end development, and thoughtful product thinking.</p>
+          <div class="cta">
+            <a href="#contact" class="btn">Book a call</a>
+            <a href="#work" class="ghost">View projects</a>
+          </div>
+        </div>
+        <div class="portrait"></div>
+      </div>
+    </section>
+
+    <section class="work" id="work">
+      <div class="container">
+        <div class="grid">
+          <div class="card">
+            <div class="thumb"></div>
+            <h3>Northstar</h3>
+            <p>Brand strategy and product landing page for a B2B SaaS launch.</p>
+          </div>
+          <div class="card">
+            <div class="thumb"></div>
+            <h3>Horizon</h3>
+            <p>Portfolio redesign focused on clearer storytelling and conversion.</p>
+          </div>
+          <div class="card">
+            <div class="thumb"></div>
+            <h3>Summit</h3>
+            <p>Responsive ecommerce experience created for a lifestyle startup.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container" id="contact">
+      <div class="contact">
+        <h2 style="margin-top:0; font-size:2rem;">Let’s build something memorable.</h2>
+        <p style="margin: 0 0 20px; color: rgba(255,255,255,0.8);">hello@lena.studio</p>
+        <a href="#" class="btn" style="background: white; color: var(--text);">Say hello</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

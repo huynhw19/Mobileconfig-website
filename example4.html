@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Landing</title>
+  <style>
+    :root {
+      --bg: #020817;
+      --panel: #0f172a;
+      --panel-2: #111827;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #22c55e;
+      --accent-2: #38bdf8;
+      --line: rgba(148,163,184,0.18);
+    }
+    *{box-sizing:border-box;}
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; background: var(--bg); color: var(--text); }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+    header { border-bottom: 1px solid var(--line); }
+    nav { display:flex; justify-content:space-between; align-items:center; min-height:72px; }
+    .brand { font-size:1.5rem; font-weight:700; }
+    .brand span { color: var(--accent); }
+    .nav { display:flex; gap:30px; color: var(--muted); }
+    .hero { padding: 80px 0 60px; }
+    .hero-wrap { display:grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items:center; }
+    h1 { font-size: clamp(2.7rem, 5vw, 4.7rem); line-height:1.08; margin: 0 0 18px; }
+    .hero p { color: var(--muted); line-height: 1.8; font-size: 1.08rem; }
+    .actions { display:flex; gap:16px; margin-top: 26px; }
+    .btn { display:inline-block; padding: 12px 18px; border-radius: 999px; font-weight:700; }
+    .primary { background: linear-gradient(135deg, var(--accent), #16a34a); color:#fff; }
+    .secondary { border:1px solid var(--line); color: var(--text); }
+    .device {
+      background: linear-gradient(180deg, rgba(56,189,248,0.14), rgba(34,197,94,0.1));
+      border: 1px solid var(--line); border-radius: 28px; padding: 22px; min-height: 480px;
+    }
+    .phone {
+      background: rgba(15, 23, 42, 0.92); border: 1px solid var(--line); border-radius: 30px; padding: 22px 18px; margin: 0 auto; width: 270px; height: 420px;
+    }
+    .screen { border-radius: 18px; background: linear-gradient(135deg, rgba(34,197,94,0.15), rgba(56,189,248,0.12)); border: 1px solid var(--line); height: 100%; padding: 20px; }
+    .metrics { display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding-top: 10px; }
+    .metric { background: rgba(15,23,42,0.8); border:1px solid var(--line); border-radius: 14px; padding: 18px; }
+    .metric strong { font-size:1.8rem; }
+    .features { display:grid; grid-template-columns: repeat(3,1fr); gap: 22px; padding: 40px 0 80px; }
+    .feature { background: rgba(17,24,39,0.9); border:1px solid var(--line); border-radius: 18px; padding: 22px; }
+    .feature p { color: var(--muted); line-height: 1.8; }
+    @media (max-width: 860px) {
+      .hero-wrap, .features, .metrics { grid-template-columns: 1fr; }
+      .nav { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Flow<span>IQ</span></div>
+        <div class="nav">
+          <a href="#features">Features</a>
+          <a href="#insights">Insights</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-wrap">
+        <div>
+          <div style="display:inline-block; background: rgba(34,197,94,0.12); border:1px solid rgba(34,197,94,0.2); color: var(--accent); padding:8px 12px; border-radius:999px; font-size:0.8rem; margin-bottom:14px;">New release • v2.8</div>
+          <h1>Turn product signals into action.</h1>
+          <p>FlowIQ helps product teams improve growth, adoption, and retention with real-time analytics and smarter workflows.</p>
+          <div class="actions">
+            <a href="#features" class="btn primary">Get started</a>
+            <a href="#insights" class="btn secondary">Watch demo</a>
+          </div>
+        </div>
+        <div class="device">
+          <div class="phone">
+            <div class="screen">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div style="font-size: 0.8rem; color: var(--muted);">Weekly</div>
+                <div style="font-size: 0.8rem; color: var(--accent);">Live</div>
+              </div>
+              <h3 style="margin: 24px 0 10px; font-size: 1.8rem;">+42.3%</h3>
+              <div style="height: 140px; border-radius: 12px; background: linear-gradient(180deg, rgba(56,189,248,0.22), rgba(34,197,94,0.22)); border:1px solid var(--line);"></div>
+              <div class="metrics">
+                <div class="metric"><strong>8.4k</strong><br><span style="font-size:0.75rem; color: var(--muted);">Users</span></div>
+                <div class="metric"><strong>91%</strong><br><span style="font-size:0.75rem; color: var(--muted);">Retention</span></div>
+                <div class="metric"><strong>4.6</strong><br><span style="font-size:0.75rem; color: var(--muted);">Rating</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="features">
+      <div class="features">
+        <div class="feature">
+          <h3>Analytics</h3>
+          <p>See product health, funnel drop-offs, and engagement trends in a single dashboard.</p>
+        </div>
+        <div class="feature">
+          <h3>Automation</h3>
+          <p>Launch workflows to onboard users, route feedback, and escalate issues automatically.</p>
+        </div>
+        <div class="feature">
+          <h3>Collaboration</h3>
+          <p>Share insights and decisions across product, marketing, and support with clear context.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
